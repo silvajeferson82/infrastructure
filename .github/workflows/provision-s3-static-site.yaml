@@ -35,7 +35,7 @@ jobs:
       - name: Add Comment
         run: gh issue comment "$NUMBER" --repo "$REPO" --body "$BODY"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
           NUMBER: ${{ github.event.issue.number }}
           REPO: ${{ github.repository }}
           BODY: "Static site created successfully!"
